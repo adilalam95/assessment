@@ -204,3 +204,20 @@ The API handles various error scenarios:
 4. **"File too large"**
    - Reduce PDF file size (max 10MB)
    - Compress PDFs if necessary
+
+# curl command to test wolf end point
+curl -v -X POST https://intertest.woolf.engineering/invoke \
+  -H "Content-Type: application/json" \
+  -H "Authorization: [auth_token]" \
+  -d '{
+    "contents": [
+      {
+        "role" : "user",
+        "parts": [
+          {
+            "text": "Hello!"
+          }
+        ]
+      }
+    ]
+  }'

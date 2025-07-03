@@ -43,6 +43,7 @@ export class AIService {
     
     const request: GeminiRequest = {
       contents: [{
+        role: 'user',
         parts: [{ text: prompt }]
       }],
       generationConfig: {
@@ -63,7 +64,7 @@ export class AIService {
         // Wolf endpoint configuration
         url = this.geminiEndpoint;
         headers = {
-          'Authorization': `Bearer ${this.authToken}`,
+          'Authorization': `${this.authToken}`,
           'Content-Type': 'application/json'
         };
       } else {

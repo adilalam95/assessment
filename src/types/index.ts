@@ -10,6 +10,7 @@ export interface AnalysisResult {
 
 export interface GeminiRequest {
   contents: {
+    role: string;
     parts: {
       text: string;
     }[];
